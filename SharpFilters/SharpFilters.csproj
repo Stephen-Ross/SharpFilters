@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A5C8B23-6FEF-4C59-B891-CA4B362F4613}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SharpFilters</RootNamespace>
+    <AssemblyName>SharpFilters</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analogs\ButterworthAnalog.cs" />
+    <Compile Include="Analogs\IAnalog.cs" />
+    <Compile Include="Analogs\IButterworthAnalog.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Butterworth.cs" />
+    <Compile Include="Enums\FilterType.cs" />
+    <Compile Include="Models\IPolesCoefficients.cs" />
+    <Compile Include="Models\PolesCoefficeints.cs" />
+    <Compile Include="Factories\Models\IPolesCoefficientsFactory.cs" />
+    <Compile Include="Factories\Models\PolesCoefficientsFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enums\" />
+    <Folder Include="Analogs\" />
+    <Folder Include="Models\" />
+    <Folder Include="Factories\" />
+    <Folder Include="Factories\Models\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
