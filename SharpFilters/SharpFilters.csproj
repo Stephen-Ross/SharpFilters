@@ -34,6 +34,7 @@
     <Compile Include="Analogs\ButterworthAnalog.cs" />
     <Compile Include="Analogs\IAnalog.cs" />
     <Compile Include="Analogs\IButterworthAnalog.cs" />
+    <Compile Include="Extensions\ComplexCollectionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Butterworth.cs" />
     <Compile Include="Enums\FilterType.cs" />
@@ -41,6 +42,9 @@
     <Compile Include="Models\PolesCoefficeints.cs" />
     <Compile Include="Factories\Models\IPolesCoefficientsFactory.cs" />
     <Compile Include="Factories\Models\PolesCoefficientsFactory.cs" />
+    <Compile Include="Transformers\HighpassTransformer.cs" />
+    <Compile Include="Transformers\ITransformer.cs" />
+    <Compile Include="Transformers\LowPassTransformer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Enums\" />
