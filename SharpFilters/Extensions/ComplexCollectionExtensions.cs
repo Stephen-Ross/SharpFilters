@@ -6,6 +6,24 @@ namespace SharpFilters.Extensions
 {
     internal static class ComplexCollectionExtensions
     {
+        public static IEnumerable<Complex> Add(this IEnumerable<Complex> complexs, double value)
+        {
+            return complexs.Select(x => x + value);
+        }
+
+        public static IEnumerable<Complex> Divide(this IEnumerable<Complex> lhsComplexs,
+            IEnumerable<Complex> rhsComplexes)
+        {
+            using (var lhsEnumerator = lhsComplexs.GetEnumerator())
+            using (var rhsEnumerator = rhsComplexes.GetEnumerator())
+            {
+                while (lhsEnumerator.MoveNext() && rhsEnumerator.MoveNext())
+                {
+                    yield return lhsEnumerator.Current / rhsEnumerator.Current;
+                }
+            }
+        }
+
         public static IEnumerable<Complex> Multiply(this IEnumerable<Complex> complexs, double value)
         {
             return complexs.Select(x => x * value);
