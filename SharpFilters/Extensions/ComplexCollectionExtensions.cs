@@ -34,6 +34,26 @@ namespace SharpFilters.Extensions
             return complexs.Select(x => -x);
         }
 
+        public static IEnumerable<Complex> PolynomialCoefficients(this IEnumerable<Complex> complexs)
+        {
+            var result = new List<Complex>
+            {
+                1.0d
+            };
+
+            foreach (var complex in complexs)
+            {
+                var value = -complex;
+                result.Add(result[result.Count - 1] * value);
+                for (var i = result.Count - 2; i >= 1; i--)
+                {
+                    result[i] = result[i] + value * result[i - 1];
+                }
+            }
+
+            return result;
+        }
+
         public static Complex Product(this IEnumerable<Complex> complexs)
         {
             var result = new Complex(1.0d, 1.0d);

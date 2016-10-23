@@ -36,6 +36,10 @@
     <Compile Include="Analogs\IButterworthAnalog.cs" />
     <Compile Include="Extensions\ComplexCollectionExtensions.cs" />
     <Compile Include="Extensions\DoubleExtensions.cs" />
+    <Compile Include="Factories\Models\IPolynomialCoefficientsFactory.cs" />
+    <Compile Include="Factories\Models\PolynomialCoefficientsFactory.cs" />
+    <Compile Include="Models\IPolynomialCoefficients.cs" />
+    <Compile Include="Models\PolynomialCoefficients.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Butterworth.cs" />
     <Compile Include="Enums\FilterType.cs" />
@@ -43,11 +47,17 @@
     <Compile Include="Models\PolesCoefficeints.cs" />
     <Compile Include="Factories\Models\IPolesCoefficientsFactory.cs" />
     <Compile Include="Factories\Models\PolesCoefficientsFactory.cs" />
+    <Compile Include="Providers\DigitialPolesProvider.cs" />
+    <Compile Include="Providers\IDigitialPolesProvider.cs" />
+    <Compile Include="Providers\IIirProvider.cs" />
+    <Compile Include="Providers\IirProvider.cs" />
     <Compile Include="Transformers\DigitalTransformer.cs" />
     <Compile Include="Transformers\HighpassTransformer.cs" />
     <Compile Include="Transformers\IDigitalTransformer.cs" />
+    <Compile Include="Transformers\IPolynomialTransformer.cs" />
     <Compile Include="Transformers\ITransformer.cs" />
     <Compile Include="Transformers\LowPassTransformer.cs" />
+    <Compile Include="Transformers\PolynomialTransformer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Enums\" />
