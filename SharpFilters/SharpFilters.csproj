@@ -36,8 +36,12 @@
     <Compile Include="Analogs\IButterworthAnalog.cs" />
     <Compile Include="Extensions\ComplexCollectionExtensions.cs" />
     <Compile Include="Extensions\DoubleExtensions.cs" />
+    <Compile Include="Factories\Analogs\ButterworthAnalogFactory.cs" />
+    <Compile Include="Factories\Analogs\IButterworthAnalogFactory.cs" />
     <Compile Include="Factories\Models\IPolynomialCoefficientsFactory.cs" />
     <Compile Include="Factories\Models\PolynomialCoefficientsFactory.cs" />
+    <Compile Include="IButterworth.cs" />
+    <Compile Include="IFilter.cs" />
     <Compile Include="Models\IPolynomialCoefficients.cs" />
     <Compile Include="Models\PolynomialCoefficients.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
