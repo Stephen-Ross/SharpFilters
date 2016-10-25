@@ -14,8 +14,6 @@ namespace SharpFilters
     {
         private readonly IButterworthAnalog butterworthAnalog;
 
-        private readonly FilterType filterType;
-
         private readonly IIirProvider iirProvider;
 
         private IPolynomialCoefficients polynomialCoefficients;
@@ -25,9 +23,8 @@ namespace SharpFilters
             var polesCoefficientsFactory = new PolesCoefficientsFactory();
             var butterworthAnalogFactory = new ButterworthAnalogFactory(polesCoefficientsFactory);
             this.butterworthAnalog = butterworthAnalogFactory.Build();
-            this.filterType = filterType;
 
-            ITransformer transformer = null;
+            ITransformer transformer;
             if (filterType == FilterType.Highpass)
             {
                 transformer = new HighpassTransformer(polesCoefficientsFactory);
