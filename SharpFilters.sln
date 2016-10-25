@@ -1,7 +1,9 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpFilters", "SharpFilters\SharpFilters.csproj", "{8A5C8B23-6FEF-4C59-B891-CA4B362F4613}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpFilters.Tests", "SharpFilters.Tests\SharpFilters.Tests.csproj", "{F7EE2558-FA39-49B4-8969-20BF13FF34A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +15,9 @@ Global
 		{8A5C8B23-6FEF-4C59-B891-CA4B362F4613}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A5C8B23-6FEF-4C59-B891-CA4B362F4613}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A5C8B23-6FEF-4C59-B891-CA4B362F4613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7EE2558-FA39-49B4-8969-20BF13FF34A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7EE2558-FA39-49B4-8969-20BF13FF34A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7EE2558-FA39-49B4-8969-20BF13FF34A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7EE2558-FA39-49B4-8969-20BF13FF34A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
