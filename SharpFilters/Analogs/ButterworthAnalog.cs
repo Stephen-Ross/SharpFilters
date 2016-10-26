@@ -26,9 +26,9 @@ namespace SharpFilters.Analogs
 
         public void CalculateAnalog(int order)
         {
-            if (Abs(order) != order)
+            if (order < 1)
             {
-                throw new ArgumentOutOfRangeException(nameof(order), @"Order must be non-negative.");
+                throw new ArgumentOutOfRangeException(nameof(order), @"Order must be greater than 0.");
             }
 
             var z = new List<Complex>();
