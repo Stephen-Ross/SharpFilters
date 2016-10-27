@@ -10,7 +10,7 @@ namespace SharpFilters.Factories.Models
     {
         public IPolesCoefficients Build(double k, IReadOnlyList<Complex> p, IReadOnlyList<Complex> z)
         {
-            return new PolesCoefficeints(k, p, z);
+            return new PolesCoefficients(k, p, z);
         }
     }
 }

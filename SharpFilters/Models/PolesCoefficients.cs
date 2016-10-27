@@ -5,7 +5,7 @@ using System.Numerics;
 
 namespace SharpFilters.Models
 {
-    internal struct PolesCoefficeints : IPolesCoefficients
+    internal struct PolesCoefficients : IPolesCoefficients
     {
         private readonly double k;
 
@@ -13,7 +13,7 @@ namespace SharpFilters.Models
 
         private readonly IReadOnlyList<Complex> z;
 
-        public PolesCoefficeints(double k, IReadOnlyList<Complex> p, IReadOnlyList<Complex> z)
+        public PolesCoefficients(double k, IReadOnlyList<Complex> p, IReadOnlyList<Complex> z)
         {
             this.k = k;
             this.p = p;

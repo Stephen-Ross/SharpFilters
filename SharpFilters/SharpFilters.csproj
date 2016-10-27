@@ -48,7 +48,7 @@
     <Compile Include="Butterworth.cs" />
     <Compile Include="Enums\FilterType.cs" />
     <Compile Include="Models\IPolesCoefficients.cs" />
-    <Compile Include="Models\PolesCoefficeints.cs" />
+    <Compile Include="Models\PolesCoefficients.cs" />
     <Compile Include="Factories\Models\IPolesCoefficientsFactory.cs" />
     <Compile Include="Factories\Models\PolesCoefficientsFactory.cs" />
     <Compile Include="Providers\DigitialPolesProvider.cs" />
