@@ -5,6 +5,7 @@ using Moq;
 using Ploeh.AutoFixture.Xunit2;
 using SharpFilters.Analogs;
 using SharpFilters.Factories.Models;
+using SharpFilters.Models;
 using SharpFilters.Tests.TestsCommon;
 using Xunit;
 
@@ -35,6 +36,10 @@ namespace SharpFilters.Tests.Analogs
 
         [Theory]
         [InlineAutoMoqData(1)]
+        [InlineAutoMoqData(2)]
+        [InlineAutoMoqData(3)]
+        [InlineAutoMoqData(4)]
+        [InlineAutoMoqData(5)]
         internal void CalculateAnalog_CorrectlyCalculatesThePCoefficient_Test(
             int order, [Frozen] Mock<IPolesCoefficientsFactory> polesCoefficientsFactory,
             ButterworthAnalog butterworthAnalog)
@@ -65,6 +70,22 @@ namespace SharpFilters.Tests.Analogs
             polesCoefficientFactory.Verify(
                 mock => mock.Build(It.IsAny<double>(), It.IsAny<IReadOnlyList<Complex>>(), new List<Complex>()),
                 Times.Once);
+        }
+
+        [Theory]
+        [InlineAutoMoqData(1)]
+        internal void CalculateAnalog_SetsTheCoefficientsPropertyToTheBuiltCoefficients_Test(
+            int order, [Frozen] Mock<IPolesCoefficientsFactory> polesCoefficientsFactory,
+            IPolesCoefficients polesCoefficients, ButterworthAnalog butterworthAnalog)
+        {
+            polesCoefficientsFactory.Setup(
+                mock =>
+                    mock.Build(It.IsAny<double>(), It.IsAny<IReadOnlyList<Complex>>(),
+                        It.IsAny<IReadOnlyList<Complex>>())).Returns(polesCoefficients);
+
+            butterworthAnalog.CalculateAnalog(order);
+
+            Assert.Equal(polesCoefficients, butterworthAnalog.Coefficients);
         }
     }
 }
