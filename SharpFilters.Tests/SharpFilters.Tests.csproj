@@ -85,6 +85,7 @@
     <Compile Include="Extensions\ComplexCollectionExtensionsTests.cs" />
     <Compile Include="Extensions\DoubleExtensionsTests.cs" />
     <Compile Include="Models\PolesCoefficientsTests.cs" />
+    <Compile Include="Models\PolynomialCoefficientsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestsCommon\AutoMoqDataAttribute.cs" />
     <Compile Include="TestsCommon\InlineAutoMoqDataAttribute.cs" />
