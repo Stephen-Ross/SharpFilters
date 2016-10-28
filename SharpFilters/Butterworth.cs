@@ -36,7 +36,7 @@ namespace SharpFilters
 
             this.iirProvider =
                 new IirProvider(
-                    new DigitialPolesProvider(transformer, new DigitalTransformer(polesCoefficientsFactory)),
+                    new DigitalPolesProvider(transformer, new DigitalTransformer(polesCoefficientsFactory)),
                     new PolynomialTransformer(new PolynomialCoefficientsFactory()));
         }
 

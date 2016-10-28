@@ -6,13 +6,13 @@ using static System.Math;
 
 namespace SharpFilters.Providers
 {
-    internal class DigitialPolesProvider : IDigitialPolesProvider
+    internal class DigitalPolesProvider : IDigitalPolesProvider
     {
         private readonly IDigitalTransformer digitalTransformer;
 
         private readonly ITransformer transformer;
 
-        public DigitialPolesProvider(ITransformer transformer, IDigitalTransformer digitalTransformer)
+        public DigitalPolesProvider(ITransformer transformer, IDigitalTransformer digitalTransformer)
         {
             this.transformer = transformer;
             this.digitalTransformer = digitalTransformer;

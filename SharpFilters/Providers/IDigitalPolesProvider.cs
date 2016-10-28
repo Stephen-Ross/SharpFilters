@@ -3,7 +3,7 @@ using SharpFilters.Models;
 
 namespace SharpFilters.Providers
 {
-    internal interface IDigitialPolesProvider
+    internal interface IDigitalPolesProvider
     {
         IPolesCoefficients GetDigitalPoles(IAnalog analog, double cutoff, double sampleRate);
     }

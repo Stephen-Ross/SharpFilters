@@ -6,11 +6,11 @@ namespace SharpFilters.Providers
 {
     internal class IirProvider : IIirProvider
     {
-        private readonly IDigitialPolesProvider digitalPolesProvider;
+        private readonly IDigitalPolesProvider digitalPolesProvider;
 
         private readonly IPolynomialTransformer polynomialTransformer;
 
-        public IirProvider(IDigitialPolesProvider digitalPolesProvider, IPolynomialTransformer polynomialTransformer)
+        public IirProvider(IDigitalPolesProvider digitalPolesProvider, IPolynomialTransformer polynomialTransformer)
         {
             this.digitalPolesProvider = digitalPolesProvider;
             this.polynomialTransformer = polynomialTransformer;

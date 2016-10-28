@@ -51,8 +51,8 @@
     <Compile Include="Models\PolesCoefficients.cs" />
     <Compile Include="Factories\Models\IPolesCoefficientsFactory.cs" />
     <Compile Include="Factories\Models\PolesCoefficientsFactory.cs" />
-    <Compile Include="Providers\DigitialPolesProvider.cs" />
-    <Compile Include="Providers\IDigitialPolesProvider.cs" />
+    <Compile Include="Providers\DigitalPolesProvider.cs" />
+    <Compile Include="Providers\IDigitalPolesProvider.cs" />
     <Compile Include="Providers\IIirProvider.cs" />
     <Compile Include="Providers\IirProvider.cs" />
     <Compile Include="Transformers\DigitalTransformer.cs" />
