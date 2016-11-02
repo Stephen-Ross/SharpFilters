@@ -93,6 +93,7 @@
     <Compile Include="TestsCommon\InlineAutoMoqDataAttribute.cs" />
     <Compile Include="Transformers\DigitalTransformerTests.cs" />
     <Compile Include="Transformers\HighpassTransformerTests.cs" />
+    <Compile Include="Transformers\LowpassTransformerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

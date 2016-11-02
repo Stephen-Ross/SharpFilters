@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using SharpFilters.Analogs;
+using SharpFilters.Extensions;
 using SharpFilters.Factories.Models;
 using SharpFilters.Models;
 
@@ -19,8 +20,8 @@ namespace SharpFilters.Transformers
         {
             var degree = analog.Coefficients.P.Count - analog.Coefficients.Z.Count;
 
-            var zLp = analog.Coefficients.Z.Select(x => x * cutoff).ToList();
-            var pLp = analog.Coefficients.P.Select(x => x * cutoff).ToList();
+            var zLp = analog.Coefficients.Z.Multiply(cutoff).ToList();
+            var pLp = analog.Coefficients.P.Multiply(cutoff).ToList();
             var kLp = analog.Coefficients.K * Math.Pow(cutoff, degree);
 
             return this.polesCoefficientsFactory.Build(kLp, pLp, zLp);
