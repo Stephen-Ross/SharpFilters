@@ -21,18 +21,13 @@ namespace SharpFilters.Transformers
         {
             var degree = analog.Coefficients.P.Count - analog.Coefficients.Z.Count;
 
-            var zHp = analog.Coefficients.Z.RhsDivide(cutoff).ToList();
+            var zHp = analog.Coefficients.Z.RhsDivide(cutoff);
             var pHp = analog.Coefficients.P.RhsDivide(cutoff);
 
-            var z = new List<Complex>();
+            var z = new List<Complex>(zHp);
 
-            for (var i = 0; i < degree + zHp.Count; i++)
+            for (var i = 0; i < degree; i++)
             {
-                if (i < zHp.Count)
-                {
-                    z.Add(zHp[i]);
-                }
-
                 z.Add(0.0d);
             }
 
