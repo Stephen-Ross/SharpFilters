@@ -2,7 +2,7 @@
 
 namespace SharpFilters.Models
 {
-    internal interface IPolynomialCoefficients
+    public interface IPolynomialCoefficients
     {
         IReadOnlyList<double> A { get; }
 

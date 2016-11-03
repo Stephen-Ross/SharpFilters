@@ -1,6 +1,5 @@
 ﻿// Stephen Ross 2016.
 
-using System.Collections.Generic;
 using SharpFilters.Analogs;
 using SharpFilters.Factories.Analogs;
 using SharpFilters.Factories.Models;
@@ -40,15 +39,16 @@ namespace SharpFilters
                     new PolynomialTransformer(new PolynomialCoefficientsFactory()));
         }
 
+        public IPolynomialCoefficients PolynomialCoefficients
+        {
+            get { return this.polynomialCoefficients; }
+            private set { this.polynomialCoefficients = value; }
+        }
+
         public void Compose(int order, double cutoff)
         {
             this.butterworthAnalog.CalculateAnalog(order);
-            this.polynomialCoefficients = this.iirProvider.GetIirCoefficients(this.butterworthAnalog, cutoff);
-        }
-
-        public IReadOnlyList<double> Filter(IReadOnlyList<double> values)
-        {
-            throw new System.NotImplementedException();
+            this.PolynomialCoefficients = this.iirProvider.GetIirCoefficients(this.butterworthAnalog, cutoff);
         }
     }
 }
