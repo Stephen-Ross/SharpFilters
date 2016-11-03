@@ -94,6 +94,7 @@
     <Compile Include="Transformers\DigitalTransformerTests.cs" />
     <Compile Include="Transformers\HighpassTransformerTests.cs" />
     <Compile Include="Transformers\LowpassTransformerTests.cs" />
+    <Compile Include="Transformers\PolynomialTransformerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
