@@ -35,6 +35,7 @@
     <Compile Include="Analogs\IAnalog.cs" />
     <Compile Include="Analogs\IButterworthAnalog.cs" />
     <Compile Include="BlockFilter.cs" />
+    <Compile Include="ContinuousFilter.cs" />
     <Compile Include="Extensions\ComplexCollectionExtensions.cs" />
     <Compile Include="Extensions\DoubleExtensions.cs" />
     <Compile Include="Factories\Analogs\ButterworthAnalogFactory.cs" />
@@ -43,6 +44,7 @@
     <Compile Include="Factories\Models\PolynomialCoefficientsFactory.cs" />
     <Compile Include="IBlockFilter.cs" />
     <Compile Include="IButterworth.cs" />
+    <Compile Include="IContinuousFilter.cs" />
     <Compile Include="IFilterDesign.cs" />
     <Compile Include="Models\IPolynomialCoefficients.cs" />
     <Compile Include="Models\PolynomialCoefficients.cs" />
