@@ -34,12 +34,14 @@
     <Compile Include="Analogs\ButterworthAnalog.cs" />
     <Compile Include="Analogs\IAnalog.cs" />
     <Compile Include="Analogs\IButterworthAnalog.cs" />
+    <Compile Include="BlockFilter.cs" />
     <Compile Include="Extensions\ComplexCollectionExtensions.cs" />
     <Compile Include="Extensions\DoubleExtensions.cs" />
     <Compile Include="Factories\Analogs\ButterworthAnalogFactory.cs" />
     <Compile Include="Factories\Analogs\IButterworthAnalogFactory.cs" />
     <Compile Include="Factories\Models\IPolynomialCoefficientsFactory.cs" />
     <Compile Include="Factories\Models\PolynomialCoefficientsFactory.cs" />
+    <Compile Include="IBlockFilter.cs" />
     <Compile Include="IButterworth.cs" />
     <Compile Include="IFilterDesign.cs" />
     <Compile Include="Models\IPolynomialCoefficients.cs" />
