@@ -32,12 +32,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analogs\ButterworthAnalog.cs" />
+    <Compile Include="Analogs\ChebyshevTypeI.cs" />
     <Compile Include="Analogs\IAnalog.cs" />
     <Compile Include="Analogs\IButterworthAnalog.cs" />
+    <Compile Include="Analogs\IChebyshevTypeI.cs" />
     <Compile Include="BlockFilter.cs" />
     <Compile Include="ContinuousFilter.cs" />
     <Compile Include="Extensions\ComplexCollectionExtensions.cs" />
     <Compile Include="Extensions\DoubleExtensions.cs" />
+    <Compile Include="Extensions\ExtendedMath.cs" />
     <Compile Include="Factories\Analogs\ButterworthAnalogFactory.cs" />
     <Compile Include="Factories\Analogs\IButterworthAnalogFactory.cs" />
     <Compile Include="Factories\Models\IPolynomialCoefficientsFactory.cs" />
