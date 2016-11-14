@@ -2,7 +2,7 @@
 
 namespace SharpFilters.Analogs
 {
-    internal interface IChebyshevTypeI : IAnalog
+    internal interface IChebyshevTypeIAnalog : IAnalog
     {
         IPolesCoefficients CalculateAnalog(int order, double ripple);
     }

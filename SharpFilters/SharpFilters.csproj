@@ -32,21 +32,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analogs\ButterworthAnalog.cs" />
-    <Compile Include="Analogs\ChebyshevTypeI.cs" />
+    <Compile Include="Analogs\ChebyshevTypeIAnalog.cs" />
     <Compile Include="Analogs\IAnalog.cs" />
     <Compile Include="Analogs\IButterworthAnalog.cs" />
-    <Compile Include="Analogs\IChebyshevTypeI.cs" />
+    <Compile Include="Analogs\IChebyshevTypeIAnalog.cs" />
     <Compile Include="BlockFilter.cs" />
+    <Compile Include="ChebyshevTypeI.cs" />
     <Compile Include="ContinuousFilter.cs" />
     <Compile Include="Extensions\ComplexCollectionExtensions.cs" />
     <Compile Include="Extensions\DoubleExtensions.cs" />
     <Compile Include="Extensions\ExtendedMath.cs" />
     <Compile Include="Factories\Analogs\ButterworthAnalogFactory.cs" />
+    <Compile Include="Factories\Analogs\ChebyshevTypeIAnalogFactory.cs" />
     <Compile Include="Factories\Analogs\IButterworthAnalogFactory.cs" />
+    <Compile Include="Factories\Analogs\IChebyshevTypeIAnalogFactory.cs" />
     <Compile Include="Factories\Models\IPolynomialCoefficientsFactory.cs" />
     <Compile Include="Factories\Models\PolynomialCoefficientsFactory.cs" />
     <Compile Include="IBlockFilter.cs" />
     <Compile Include="IButterworth.cs" />
+    <Compile Include="IChebyshevTypeI.cs" />
     <Compile Include="IContinuousFilter.cs" />
     <Compile Include="IFilterDesign.cs" />
     <Compile Include="Models\IPolynomialCoefficients.cs" />

@@ -7,13 +7,13 @@ using SharpFilters.Models;
 
 namespace SharpFilters.Analogs
 {
-    internal class ChebyshevTypeI : IChebyshevTypeI
+    internal class ChebyshevTypeIAnalog : IChebyshevTypeIAnalog
     {
         private readonly IPolesCoefficientsFactory polesCoefficientsFactory;
 
         private IPolesCoefficients polesCoefficients;
 
-        public ChebyshevTypeI(IPolesCoefficientsFactory polesCoefficientsFactory)
+        public ChebyshevTypeIAnalog(IPolesCoefficientsFactory polesCoefficientsFactory)
         {
             this.polesCoefficientsFactory = polesCoefficientsFactory;
         }
