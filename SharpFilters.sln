@@ -5,6 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpFilters", "SharpFilter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpFilters.Tests", "SharpFilters.Tests\SharpFilters.Tests.csproj", "{F7EE2558-FA39-49B4-8969-20BF13FF34A1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{112733D6-D37C-4A33-A518-07D1F478F0DD}"
+ProjectSection(SolutionItems) = preProject
+	LICENSE.txt = LICENSE.txt
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

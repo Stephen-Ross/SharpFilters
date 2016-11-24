@@ -81,8 +81,5 @@
     <Folder Include="Factories\" />
     <Folder Include="Factories\Models\" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="LICENSE.txt" />
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
