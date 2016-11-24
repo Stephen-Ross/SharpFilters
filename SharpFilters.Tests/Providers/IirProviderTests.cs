@@ -1,4 +1,6 @@
-﻿using Moq;
+﻿// Copyright © Stephen Ross 2016
+
+using Moq;
 using Ploeh.AutoFixture.Xunit2;
 using SharpFilters.Analogs;
 using SharpFilters.Models;

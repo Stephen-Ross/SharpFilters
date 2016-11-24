@@ -1,4 +1,6 @@
-﻿using Ploeh.AutoFixture;
+﻿// Copyright © Stephen Ross 2016
+
+using Ploeh.AutoFixture;
 using Ploeh.AutoFixture.AutoMoq;
 using Ploeh.AutoFixture.Xunit2;
 

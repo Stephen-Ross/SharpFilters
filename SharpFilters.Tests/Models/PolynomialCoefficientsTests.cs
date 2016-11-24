@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿// Copyright © Stephen Ross 2016
+
+using System.Collections.Generic;
 using Ploeh.AutoFixture.Xunit2;
 using SharpFilters.Models;
 using SharpFilters.Tests.TestsCommon;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright © Stephen Ross 2016
+
 using System.Threading;
 
 namespace SharpFilters

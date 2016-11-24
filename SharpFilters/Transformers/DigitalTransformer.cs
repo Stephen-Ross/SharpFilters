@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿// Copyright © Stephen Ross 2016
+
+using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using SharpFilters.Extensions;

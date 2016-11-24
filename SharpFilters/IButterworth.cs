@@ -1,4 +1,6 @@
-﻿namespace SharpFilters
+﻿// Copyright © Stephen Ross 2016
+
+namespace SharpFilters
 {
     public interface IButterworth : IFilterDesign
     {

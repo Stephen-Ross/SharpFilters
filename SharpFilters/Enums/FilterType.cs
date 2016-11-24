@@ -1,6 +1,6 @@
-﻿// Stephen Ross 2016.
+﻿// Copyright © Stephen Ross 2016
 
-namespace SharpFilters
+namespace SharpFilters.Enums
 {
     public enum FilterType
     {

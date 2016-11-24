@@ -1,4 +1,6 @@
-﻿using Ploeh.AutoFixture.Xunit2;
+﻿// Copyright © Stephen Ross 2016
+
+using Ploeh.AutoFixture.Xunit2;
 using Xunit;
 
 namespace SharpFilters.Tests.TestsCommon

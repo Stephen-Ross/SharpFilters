@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Copyright © Stephen Ross 2016
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;

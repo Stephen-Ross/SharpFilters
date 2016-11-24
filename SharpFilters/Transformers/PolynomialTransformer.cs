@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿// Copyright © Stephen Ross 2016
+
+using System.Linq;
 using SharpFilters.Extensions;
 using SharpFilters.Factories.Models;
 using SharpFilters.Models;

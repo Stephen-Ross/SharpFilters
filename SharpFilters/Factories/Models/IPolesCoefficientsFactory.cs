@@ -1,4 +1,4 @@
-﻿// Stephen Ross 2016.
+﻿// Copyright © Stephen Ross 2016
 
 using System.Collections.Generic;
 using System.Numerics;

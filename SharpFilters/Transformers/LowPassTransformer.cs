@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Copyright © Stephen Ross 2016
+
+using System;
 using System.Linq;
 using SharpFilters.Analogs;
 using SharpFilters.Extensions;

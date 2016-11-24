@@ -1,6 +1,7 @@
-﻿// Stephen Ross 2016.
+﻿// Copyright © Stephen Ross 2016
 
 using SharpFilters.Analogs;
+using SharpFilters.Enums;
 using SharpFilters.Factories.Analogs;
 using SharpFilters.Factories.Models;
 using SharpFilters.Models;

@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Copyright © Stephen Ross 2016
+
+using System;
 using Moq;
 using Ploeh.AutoFixture.Xunit2;
 using SharpFilters.Analogs;

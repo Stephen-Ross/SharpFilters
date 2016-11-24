@@ -1,4 +1,6 @@
-﻿using SharpFilters.Models;
+﻿// Copyright © Stephen Ross 2016
+
+using SharpFilters.Models;
 
 namespace SharpFilters.Transformers
 {

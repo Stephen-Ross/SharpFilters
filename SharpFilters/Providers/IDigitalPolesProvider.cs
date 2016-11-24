@@ -1,4 +1,6 @@
-﻿using SharpFilters.Analogs;
+﻿// Copyright © Stephen Ross 2016
+
+using SharpFilters.Analogs;
 using SharpFilters.Models;
 
 namespace SharpFilters.Providers
