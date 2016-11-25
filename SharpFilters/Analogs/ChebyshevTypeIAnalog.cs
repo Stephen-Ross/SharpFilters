@@ -33,7 +33,7 @@ namespace SharpFilters.Analogs
                 throw new ArgumentOutOfRangeException(nameof(order), @"Order must be greater than 0.");
             }
 
-            if (ripple < 1.0d)
+            if (ripple >= 0.0d)
             {
                 throw new ArgumentOutOfRangeException(nameof(ripple), @"Ripple must be greater than 0.");
             }

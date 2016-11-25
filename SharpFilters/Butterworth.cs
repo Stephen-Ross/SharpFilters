@@ -25,7 +25,9 @@ namespace SharpFilters
         /// <summary>
         /// Builds a new Butterworth design filter for the supplied filter type with the specified order and cutoff.
         /// </summary>
-        /// <param name="filterType">The Filter Type required.</param>
+        /// <param name="filterType">
+        /// The Filter Type required.
+        /// </param>
         /// <param name="order">
         /// The n-th order of the filter.
         /// </param>
