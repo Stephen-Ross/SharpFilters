@@ -18,7 +18,7 @@ namespace SharpFilters
 
         private IPolynomialCoefficients polynomialCoefficients;
 
-        public Butterworth(FilterType filterType)
+        public Butterworth(FilterType filterType, int order, double cutoff)
         {
             var polesCoefficientsFactory = new PolesCoefficientsFactory();
             var butterworthAnalogFactory = new ButterworthAnalogFactory(polesCoefficientsFactory);
@@ -38,6 +38,8 @@ namespace SharpFilters
                 new IirProvider(
                     new DigitalPolesProvider(transformer, new DigitalTransformer(polesCoefficientsFactory)),
                     new PolynomialTransformer(new PolynomialCoefficientsFactory()));
+
+            this.Compose(order, cutoff);
         }
 
         public IPolynomialCoefficients PolynomialCoefficients

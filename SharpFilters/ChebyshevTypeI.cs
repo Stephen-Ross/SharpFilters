@@ -18,7 +18,7 @@ namespace SharpFilters
 
         private IPolynomialCoefficients polynomialCoefficients;
 
-        public ChebyshevTypeI(FilterType filterType)
+        public ChebyshevTypeI(FilterType filterType, int order, double cutoff, double ripple)
         {
             var polesCoefficientsFactory = new PolesCoefficientsFactory();
             var chebyshevTypeIFactory = new ChebyshevTypeIAnalogFactory(polesCoefficientsFactory);
@@ -38,6 +38,8 @@ namespace SharpFilters
                 new IirProvider(
                     new DigitalPolesProvider(transformer, new DigitalTransformer(polesCoefficientsFactory)),
                     new PolynomialTransformer(new PolynomialCoefficientsFactory()));
+
+            this.Compose(order, cutoff, ripple);
         }
 
         public IPolynomialCoefficients PolynomialCoefficients
