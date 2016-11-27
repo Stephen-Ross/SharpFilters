@@ -4,21 +4,16 @@ using System;
 using SharpFilters.Analogs;
 using SharpFilters.Enums;
 using SharpFilters.Factories.Analogs;
-using SharpFilters.Factories.Models;
 using SharpFilters.Models;
-using SharpFilters.Providers;
-using SharpFilters.Transformers;
 
 namespace SharpFilters
 {
     /// <summary>
     /// Implementation of the Butterworth Filter design.
     /// </summary>
-    public class Butterworth : IButterworth
+    public sealed class Butterworth : BaseFilterDesign, IButterworth
     {
         private readonly IButterworthAnalog butterworthAnalog;
-
-        private readonly IIirProvider iirProvider;
 
         private IPolynomialCoefficients polynomialCoefficients;
 
@@ -38,25 +33,10 @@ namespace SharpFilters
         /// Thrown if the order supplied is less than 1.
         /// </exception>
         public Butterworth(FilterType filterType, int order, double cutoff)
+            : base(filterType)
         {
-            var polesCoefficientsFactory = new PolesCoefficientsFactory();
             var butterworthAnalogFactory = new ButterworthAnalogFactory(polesCoefficientsFactory);
             this.butterworthAnalog = butterworthAnalogFactory.Build();
-
-            ITransformer transformer;
-            if (filterType == FilterType.Highpass)
-            {
-                transformer = new HighpassTransformer(polesCoefficientsFactory);
-            }
-            else
-            {
-                transformer = new LowPassTransformer(polesCoefficientsFactory);
-            }
-
-            this.iirProvider =
-                new IirProvider(
-                    new DigitalPolesProvider(transformer, new DigitalTransformer(polesCoefficientsFactory)),
-                    new PolynomialTransformer(new PolynomialCoefficientsFactory()));
 
             this.Compose(order, cutoff);
         }
@@ -72,7 +52,7 @@ namespace SharpFilters
         public void Compose(int order, double cutoff)
         {
             this.butterworthAnalog.CalculateAnalog(order);
-            this.PolynomialCoefficients = this.iirProvider.GetIirCoefficients(this.butterworthAnalog, cutoff);
+            this.PolynomialCoefficients = this.Compose(this.butterworthAnalog, cutoff);
         }
     }
 }

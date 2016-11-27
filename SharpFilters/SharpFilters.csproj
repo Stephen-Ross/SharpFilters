@@ -36,6 +36,7 @@
     <Compile Include="Analogs\IAnalog.cs" />
     <Compile Include="Analogs\IButterworthAnalog.cs" />
     <Compile Include="Analogs\IChebyshevTypeIAnalog.cs" />
+    <Compile Include="BaseFilterDesign.cs" />
     <Compile Include="BlockFilter.cs" />
     <Compile Include="ChebyshevTypeI.cs" />
     <Compile Include="ContinuousFilter.cs" />
