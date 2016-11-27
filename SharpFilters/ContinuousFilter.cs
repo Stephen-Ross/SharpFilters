@@ -4,7 +4,10 @@ using System.Threading;
 
 namespace SharpFilters
 {
-    internal class ContinuousFilter : IContinuousFilter
+    /// <summary>
+    /// Implementation of a continious IIR Filter.
+    /// </summary>
+    internal sealed class ContinuousFilter : IContinuousFilter
     {
         private static SpinLock spinLock = new SpinLock();
 
@@ -14,6 +17,12 @@ namespace SharpFilters
 
         private double[] yv;
 
+        /// <summary>
+        /// Builds a new continious filter using the supplied filter design.
+        /// </summary>
+        /// <param name="filterDesign">
+        /// The design of the filter providing the build polynomials.
+        /// </param>
         public ContinuousFilter(IFilterDesign filterDesign)
         {
             this.filterDesign = filterDesign;
@@ -21,6 +30,7 @@ namespace SharpFilters
             this.yv = new double[filterDesign.PolynomialCoefficients.A.Count];
         }
 
+        /// <inheritdoc />
         public double Filter(double data)
         {
             var lockTaken = false;
@@ -63,6 +73,7 @@ namespace SharpFilters
             }
         }
 
+        /// <inheritdoc />
         public void Reset()
         {
             var lockTaken = false;
