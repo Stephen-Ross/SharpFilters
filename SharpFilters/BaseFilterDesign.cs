@@ -9,6 +9,9 @@ using SharpFilters.Transformers;
 
 namespace SharpFilters
 {
+    /// <summary>
+    /// Base class for Filter Designs.
+    /// </summary>
     public abstract class BaseFilterDesign
     {
         private readonly IIirProvider iirProvider;
