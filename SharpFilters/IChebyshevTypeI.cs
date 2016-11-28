@@ -10,6 +10,11 @@ namespace SharpFilters
     public interface IChebyshevTypeI : IFilterDesign
     {
         /// <summary>
+        /// Gets the peak-to-peak passband rupple. Expressed in decibels.
+        /// </summary>
+        double Ripple { get; }
+
+        /// <summary>
         /// Composes the filter based button the order, cutoff and ripple supplied.
         /// </summary>
         /// <param name="order">

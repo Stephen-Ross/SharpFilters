@@ -15,7 +15,7 @@ namespace SharpFilters
     {
         private readonly IChebyshevTypeIAnalog chebyshevTypeIAnalog;
 
-        private IPolynomialCoefficients polynomialCoefficients;
+        private double ripple;
 
         /// <summary>
         /// Builds a new Chebyshev Type I filter for the supplied filter type with the specified order, cutoff and ripple.
@@ -45,23 +45,20 @@ namespace SharpFilters
         }
 
         /// <inheritdoc />
-        public IPolynomialCoefficients PolynomialCoefficients
+        public double Ripple
         {
-            get
-            {
-                return polynomialCoefficients;
-            }
-            private set
-            {
-                polynomialCoefficients = value;
-            }
+            get { return ripple; }
+            private set { ripple = value; }
         }
 
         /// <inheritdoc />
         public void Compose(int order, double cutoff, double ripple)
         {
+            this.Order = order;
+            this.Ripple = ripple;
+
             this.chebyshevTypeIAnalog.CalculateAnalog(order, ripple);
-            this.PolynomialCoefficients = this.Compose(this.chebyshevTypeIAnalog, cutoff);
+            this.Compose(this.chebyshevTypeIAnalog, cutoff);
         }
     }
 }

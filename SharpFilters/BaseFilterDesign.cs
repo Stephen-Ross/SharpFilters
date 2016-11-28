@@ -12,11 +12,17 @@ namespace SharpFilters
     /// <summary>
     /// Base class for Filter Designs.
     /// </summary>
-    public abstract class BaseFilterDesign
+    public abstract class BaseFilterDesign : IFilterDesign
     {
         private readonly IIirProvider iirProvider;
 
         internal readonly IPolesCoefficientsFactory polesCoefficientsFactory;
+
+        private double cutoff;
+
+        private int order;
+
+        private IPolynomialCoefficients polynomialCoefficients;
 
         protected BaseFilterDesign(FilterType filterType)
         {
@@ -38,9 +44,31 @@ namespace SharpFilters
                     new PolynomialTransformer(new PolynomialCoefficientsFactory()));
         }
 
-        internal IPolynomialCoefficients Compose(IAnalog analog, double cutoff)
+        /// <inheritdoc />
+        public double Cutoff
         {
-            return this.iirProvider.GetIirCoefficients(analog, cutoff);
+            get { return cutoff; }
+            private set { cutoff = value; }
+        }
+
+        /// <inheritdoc />
+        public int Order
+        {
+            get { return order; }
+            protected set { order = value; }
+        }
+
+        /// <inheritdoc />
+        public IPolynomialCoefficients PolynomialCoefficients
+        {
+            get { return polynomialCoefficients; }
+            private set { polynomialCoefficients = value; }
+        }
+
+        internal void Compose(IAnalog analog, double cutoff)
+        {
+            this.Cutoff = cutoff;
+            this.PolynomialCoefficients = this.iirProvider.GetIirCoefficients(analog, cutoff);
         }
     }
 }

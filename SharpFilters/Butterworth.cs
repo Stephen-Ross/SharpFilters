@@ -15,8 +15,6 @@ namespace SharpFilters
     {
         private readonly IButterworthAnalog butterworthAnalog;
 
-        private IPolynomialCoefficients polynomialCoefficients;
-
         /// <summary>
         /// Builds a new Butterworth design filter for the supplied filter type with the specified order and cutoff.
         /// </summary>
@@ -42,17 +40,12 @@ namespace SharpFilters
         }
 
         /// <inheritdoc />
-        public IPolynomialCoefficients PolynomialCoefficients
-        {
-            get { return this.polynomialCoefficients; }
-            private set { this.polynomialCoefficients = value; }
-        }
-
-        /// <inheritdoc />
         public void Compose(int order, double cutoff)
         {
+            this.Order = order;
+
             this.butterworthAnalog.CalculateAnalog(order);
-            this.PolynomialCoefficients = this.Compose(this.butterworthAnalog, cutoff);
+            this.Compose(this.butterworthAnalog, cutoff);
         }
     }
 }
