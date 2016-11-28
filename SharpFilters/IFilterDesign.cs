@@ -1,5 +1,6 @@
 ﻿// Copyright © Stephen Ross 2016
 
+using SharpFilters.Enums;
 using SharpFilters.Models;
 
 namespace SharpFilters
@@ -13,6 +14,11 @@ namespace SharpFilters
         /// Gets the cutoff of the filter.
         /// </summary>
         double Cutoff { get; }
+
+        /// <summary>
+        /// Gets the filter type of the design.
+        /// </summary>
+        FilterType FilterType { get; }
 
         /// <summary>
         /// Gets the n-th order of the filter.

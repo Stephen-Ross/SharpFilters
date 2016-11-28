@@ -14,6 +14,8 @@ namespace SharpFilters
     /// </summary>
     public abstract class BaseFilterDesign : IFilterDesign
     {
+        private readonly FilterType filterType;
+
         private readonly IIirProvider iirProvider;
 
         internal readonly IPolesCoefficientsFactory polesCoefficientsFactory;
@@ -26,6 +28,7 @@ namespace SharpFilters
 
         protected BaseFilterDesign(FilterType filterType)
         {
+            this.filterType = filterType;
             this.polesCoefficientsFactory = new PolesCoefficientsFactory();
 
             ITransformer transformer;
@@ -49,6 +52,12 @@ namespace SharpFilters
         {
             get { return cutoff; }
             private set { cutoff = value; }
+        }
+
+        /// <inheritdoc />
+        public FilterType FilterType
+        {
+            get { return filterType; }
         }
 
         /// <inheritdoc />
